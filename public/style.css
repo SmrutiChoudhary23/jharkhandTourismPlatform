@@ -477,7 +477,9 @@ nav a:hover::after
     transform: translateY(-5px);
 }
 
-#districtListBox{
+#districtListBox
+{
+    position: relative;
     width: 300px;
     height: 710px;
     padding: 85px 20px 0;
@@ -485,17 +487,23 @@ nav a:hover::after
     float: left;
 }
 
-#districtListBox h1{
+#districtListBox h1
+{
     position: absolute;
+    top: 0;
     left: 0;
     width: 100vw;
+    height: 85px;
+    box-sizing: border-box;
+    padding-top: 5px;
     text-align: center;
     color: #3e3025;
     font-size: 2.7rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    margin: -25px 0px 0px;
-    padding-top: 0px;
+    margin: 0;
+    background-color: #fff8e7;
+    z-index: 100;
     line-height: 1.2;
 }
 #districtList{
@@ -518,7 +526,7 @@ nav a:hover::after
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#districtList li:hover{
+#districtList li:active{
     background-color: #c89b3c;
     color: white;
 }
@@ -542,47 +550,65 @@ nav a:hover::after
     gap: 15px;
 }
 
-.placeCard{
+.placeCard
+{
     position: relative;
-    height: 210px;
+    height: 420px;
     overflow: hidden;
     border-radius: 8px;
-    background-color: #3e3025;
+    background-color: #fff8e7;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.placeCard img{
+.placeCard:hover
+{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.placeCard img
+{
     width: 100%;
-    height: 100%;
+    height: 180px;
     object-fit: cover;
     display: block;
     transition: transform 0.6s ease;
 }
-
-.placeCard:hover img{
-    transform: scale(1.08);
+.placeCard:hover img
+{
+    transform: scale(1.05);
 }
-
-.placeCard::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.75),
-        rgba(0, 0, 0, 0.05)
-    );
+.placeCard h3
+{
+    color: #3e3025;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 14px 18px 8px;
 }
-
-.placeCard h3{
-    position: absolute;
-    left: 18px;
-    bottom: 15px;
-    z-index: 2;
+.placeCard p
+{
+    color: #766658;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    margin: 6px 18px;
+}
+.placeCard button
+{
+    margin: 10px 18px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c89b3c;
     color: white;
-    font-size: 1.15rem;
-    font-weight: 500;
-    margin: 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.placeCard button:hover
+{
+    background-color: #b85c38;
 }
 
 
