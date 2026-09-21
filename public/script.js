@@ -1,9 +1,10 @@
+//Part 1
 const cards = document.querySelectorAll(".destinationCards, .categoryCard");
 const observer = new IntersectionObserver((entries) => 
 {
     entries.forEach((entry) => 
     {
-        if (entry.isIntersecting) 
+        if(entry.isIntersecting) 
         {
             entry.target.classList.add("show");
         }
@@ -15,6 +16,8 @@ cards.forEach((card) =>
 });
 
 /*Explore Page*/
+
+//Part 2
 const districts = document.querySelectorAll('#districtList li')
 const destinations = document.querySelectorAll('.districtDestination')
 districts.forEach(function(district) 
