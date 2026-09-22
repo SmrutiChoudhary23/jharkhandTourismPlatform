@@ -612,6 +612,86 @@ nav a:hover::after
 }
 
 
+/* Plan Your Trip Page */
+main form
+{
+    min-height: 180px;
+    padding: 35px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: #fff8e7;
+    border-bottom: 1px solid #e2d5c4;
+}
+main form input, main form select
+{
+    height: 48px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #d6c8b8;
+    border-radius: 6px;
+    outline: none;
+    background-color: white;
+    color: #3e3025;
+    font-size: 0.95rem;
+}
+main form input:focus, main form select:focus
+{
+    border-color: #c89b3c;
+    box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15);
+}
+main form input[type="text"]
+{
+    width: 230px;
+}
+main form input[type="number"]
+{
+    width: 190px;
+}
+main form select
+{
+    width: 190px;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #d6c8b8;
+    border-radius: 6px;
+    outline: none;
+    background-color: white;
+    color: #3e3025;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+main form input[type="submit"], main form button
+{
+    height: 48px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c89b3c;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+main form input[type="submit"]:hover, main form button:hover
+{
+    background-color: #b85c38;
+    transform: translateY(-2px);
+}
+main>div
+{
+    min-height: 420px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #f7f3e8;
+    color: #3e3025;
+    font-size: 1.1rem;
+}
+
 
 
 

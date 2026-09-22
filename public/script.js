@@ -1,3 +1,4 @@
+/*Home Page*/
 //Part 1
 const cards = document.querySelectorAll(".destinationCards, .categoryCard");
 const observer = new IntersectionObserver((entries) => 
@@ -16,7 +17,6 @@ cards.forEach((card) =>
 });
 
 /*Explore Page*/
-
 //Part 2
 const districts = document.querySelectorAll('#districtList li')
 const destinations = document.querySelectorAll('.districtDestination')
@@ -48,3 +48,20 @@ districts.forEach(function(district)
         }
     });
 });
+
+/*Plan your Trip Page*/
+//Part 3
+const tripForm = document.querySelector('form')
+const startingLocation = document.querySelector('input[type="text"]')
+const numberInputs = document.querySelectorAll('input[type="number"]')
+const budget = numberInputs[0];
+const days = numberInputs[1];
+const interest = document.querySelector("select")
+tripForm.addEventListener('submit', function(event)
+{
+    event.preventDefault();
+    console.log(startingLocation.value);
+    console.log(budget.value);
+    console.log(days.value);
+    console.log(interest.value);
+})

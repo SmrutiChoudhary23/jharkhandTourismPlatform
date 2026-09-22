@@ -29,6 +29,22 @@ app.get("/my-trips", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "MyTrips.html"));
 });
 
+app.get("/tourist-data-analytics", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "TouristDataAnalytics.html"));
+});
+
+app.get("/handicrafts", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "Handicrafts.html"));
+});
+
+app.get("/weather", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "Weather.html"));
+});
+
+app.get("/my-profile", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "MyProfile.html"));
+});
+
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
 });
