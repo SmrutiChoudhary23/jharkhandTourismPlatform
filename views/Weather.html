@@ -27,12 +27,26 @@
         </div>
     </header>
 
-    <!--Main-->
-    <main>
-        
+    <!--Main--> 
+    <main> 
+        <section class="weatherSection"> 
+            <h1>Jharkhand Weather</h1> 
+            <p class="weatherIntro">Check the current Weather Conditions of your Destination.</p> 
+            <div class="weatherSearch"> 
+                <input type="text" id="cityInput" placeholder="Enter city or destination"> 
+                <button type="button" id="weatherButton">Check Weather</button> 
+            </div> 
+            <div id="weatherResult"> 
+                <h2>Weather Information</h2> 
+                <p id="cityName">Search for a City to see Weather.</p> 
+                <p id="temperature"></p> 
+                <p id="condition"></p> 
+                <p id="humidity"></p> 
+                <p id="wind"></p> 
+            </div> 
+        </section> 
     </main>
 
-    
     <!--Footer-->
     <footer>
         <div class="footerContent">
@@ -56,5 +70,6 @@
     </footer>
 
     <!--JavaScript-->
+    <script src="/weather.js"></script> 
 </body>
 </html>

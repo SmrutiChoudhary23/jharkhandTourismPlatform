@@ -693,7 +693,209 @@ main>div
 }
 
 
+/*Weather Page*/
+.weatherSection
+{
+    min-height: 650px;
+    padding: 70px 30px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f7f3e8, #fff8e7);
+    text-align: center;
+}
+.weatherSection h1
+{
+    color: #3e3025;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 0 0 10px;
+    letter-spacing: 0.5px;
+}
+.weatherIntro
+{
+    color: #766658;
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+.weatherSearch
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 45px;
+}
+.weatherSearch input
+{
+    width: 330px;
+    height: 52px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    border: 1px solid #d6c8b8;
+    border-radius: 8px;
+    outline: none;
+    background-color: white;
+    color: #3e3025;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(62, 48, 37, 0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.weatherSearch input:focus
+{
+    border-color: #c89b3c;
+    box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15);
+}
+.weatherSearch button
+{
+    height: 52px;
+    padding: 0 26px;
+    border: none;
+    border-radius: 8px;
+    background-color: #b85c38;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(184, 92, 56, 0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.weatherSearch button:hover
+{
+    background-color: #3e3025;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(62, 48, 37, 0.2);
+}
+#weatherResult
+{
+    width: 560px;
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 35px 40px 40px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 14px;
+    border-top: 5px solid #c89b3c;
+    box-shadow: 0 12px 30px rgba(62, 48, 37, 0.14);
+}
+#weatherResult h2
+{
+    color: #3e3025;
+    font-size: 1.6rem;
+    margin: 0 0 25px;
+    font-weight: 600;
+}
+#cityName
+{
+    color: #3e3025 !important;
+    font-size: 1.7rem !important;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 22px !important;
+}
+#temperature
+{
+    color: #b85c38 !important;
+    font-size: 1.8rem !important;
+    font-weight: 600;
+    margin: 15px 0 !important;
+}
+#condition
+{
+    color: #766658 !important;
+    font-size: 1.1rem !important;
+    margin: 12px 0 !important;
+}
+#humidity, #wind
+{
+    color: #766658 !important;
+    font-size: 1rem !important;
+    margin: 12px 0 !important;
+}
+#condition, #humidity, #wind
+{
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #f7f3e8;
+}
+#weatherResult p
+{
+    line-height: 1.5; 
+}
 
+/*My Trips Page*/
+.myTripsPage
+{
+    min-height: 700px;
+    background-color: #fff8e7;
+    padding-bottom: 70px;
+}
+.myTripsHero
+{
+    padding: 65px 30px 45px;
+    text-align: center;
+    background: linear-gradient(135deg, #f7f3e8, #fff8e7);
+}
+.myTripsHero h1
+{
+    color: #3e3025;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+.myTripsHero p
+{
+    color: #766658;
+    font-size: 1.05rem;
+    margin: 0;
+}
+.savedSection
+{
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto 0;
+}
+.savedSection h2
+{
+    color: #3e3025;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+.sectionIntro
+{
+    color: #766658;
+    font-size: 0.95rem;
+    margin: 0 0 25px;
+}
+.savedDestinations, .savedTrips
+{
+    min-height: 180px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border-top: 4px solid #c89b3c;
+    box-shadow: 0 6px 18px rgba(62, 48, 37, 0.10);
+}
+.savedDestinations
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.savedTrips
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.emptyMessage
+{
+    grid-column: 1 / -1;
+    color: #766658;
+    text-align: center;
+    font-size: 1rem;
+    margin: 55px 0;
+}
 
 
 

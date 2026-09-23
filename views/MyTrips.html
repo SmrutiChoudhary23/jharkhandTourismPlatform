@@ -28,10 +28,30 @@
     </header>
 
     <!--Main-->
-    <main>
-        <ul>
+    <main class="myTripsPage">
+        <section class="myTripsHero">
+            <h1>My Trips</h1>
+            <p>Manage your saved destinations and planned trips in one place.</p>
+        </section>
 
-        </ul>
+        <section class="savedSection">
+            <h2>Saved Destinations</h2>
+            <p class="sectionIntro">Places you have saved while exploring Jharkhand.</p>
+
+            <div id="savedDestinations" class="savedDestinations">
+                <p class="emptyMessage">No saved destinations yet.</p>
+            </div>
+        </section>
+
+        <section class="savedSection">
+            <h2>Saved Trips</h2>
+            <p class="sectionIntro">Your planned trips and travel details.</p>
+
+            <div id="savedTrips" class="savedTrips">
+                <p class="emptyMessage">No saved trips yet.</p>
+            </div>
+        </section>
+
     </main>
 
     <!--Footer-->
@@ -57,5 +77,6 @@
     </footer>
 
     <!--JavaScript-->
+    <script src="/script.js"></script>
 </body>
 </html>

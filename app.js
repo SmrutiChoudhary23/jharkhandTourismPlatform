@@ -1,5 +1,9 @@
 const express = require('express')
 const path = require('path')
+const mongoose = require('mongoose')
+require('dotenv').config()
+
+const Destination = require("./models/Destination");
 
 const app = express()
 app.use(express.static("public"));
@@ -43,6 +47,35 @@ app.get("/weather", (req, res) => {
 
 app.get("/my-profile", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "MyProfile.html"));
+});
+
+mongoose.connect(process.env.MONGO_URI)
+.then(function()
+{
+    console.log("MongoDB connected successfully");
+})
+.catch(function(error)
+{
+    console.log("MongoDB connection failed:", error);
+});
+
+app.get("/add-test-destination", async (req, res) => {
+    const destination = new Destination({
+        name: "Dassam Falls",
+        district: "Ranchi",
+        category: "Waterfalls",
+        description: "A popular waterfall near Ranchi.",
+        image: "images/dassam-falls.jpg",
+        bestTime: "October to February",
+        estimatedCost: 500
+    });
+    await destination.save();
+    res.send("Destination saved successfully");
+});
+
+app.get("/api/destinations", async (req, res) => {
+    const destinations = await Destination.find();
+    res.json(destinations);
 });
 
 app.listen(3000, () => {
